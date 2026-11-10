@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>London Christmas Lights Walks 2026 · Mostly Ghumo</title>
+<meta name="description" content="The London Christmas lights walk I planned this year: 9 West End stops from Selfridges to Covent Garden, a 1-hour version, a calmer Knightsbridge and Chelsea walk, plus nearest tubes and buses.">
+<meta property="og:title" content="London Christmas lights walks 2026">
+<meta property="og:description" content="9 stops, ~4 km, free: Selfridges to Covent Garden, with tubes and buses at every stop.">
+<meta property="og:image" content="../assets/og-lights-walk.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,900;1,900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* Lights-walk guide, in the site's night-sky Christmas theme */
+.lw{display:flex;flex-direction:column;gap:30px;margin-top:22px;line-height:1.55}
+.lw section{margin-top:0}
+.lw h2,.lw h3{margin:0;text-wrap:balance}
+.lw h2{font:900 24px "Inter",sans-serif;display:block}
+.lw h3{font:700 18px "Poppins",sans-serif;line-height:1.3}
+.lw p{margin:0}
+.lw .caps{font:700 11px "Poppins",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.lw .switch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lw .switch a{display:flex;flex-direction:column;gap:4px;padding:14px;border-radius:18px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--red);text-decoration:none;min-width:0}
+.lw .switch a:last-child{border-top-color:var(--green)}
+.lw .switch a .caps{color:var(--gold)}
+.lw .switch a b{font-size:17px;line-height:1.25}
+.lw .switch a span{color:var(--muted);font-size:13px}
+@media (max-width:440px){.lw .switch{grid-template-columns:1fr}}
+.lw .route{display:flex;flex-direction:column;gap:24px;padding-top:30px;background:repeating-linear-gradient(90deg,var(--red) 0 14px,var(--cream) 14px 28px) top/100% 5px no-repeat}
+.lw .hero{display:flex;flex-direction:column;gap:12px;text-align:left;margin:0}
+.lw .eyebrow{display:flex;align-items:center;gap:10px;color:var(--gold)}
+.lw .eyebrow::before{content:"";width:28px;height:2px;background:var(--gold)}
+.lw .routeh{font:900 clamp(30px,8vw,40px)/1 "Inter",sans-serif;letter-spacing:-.02em}
+.lw .path{color:var(--muted)}
+.lw .lede{color:var(--muted)}
+.lw .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid var(--line);padding-top:14px}
+.lw .stats b{display:block;font:900 22px "Inter",sans-serif;color:var(--gold)}
+.lw .stats span{color:var(--muted);font-size:10px}
+@media (max-width:440px){.lw .stats{grid-template-columns:repeat(2,1fr);row-gap:14px}}
+.lw .map{margin:0;padding:7px;border-radius:18px;background:repeating-linear-gradient(135deg,var(--red) 0 12px,var(--cream) 12px 24px)}
+.lw .map img{display:block;width:100%;height:auto;border-radius:12px}
+.lw .map figcaption{color:#5b4a46;background:#fffaf3;font-size:13px;padding:10px 12px;border-radius:0 0 12px 12px;margin-top:-6px}
+.lw .btnrow{display:flex;flex-wrap:wrap;gap:10px}
+.lw .btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:99px;font-size:15px}
+.lw .btn.ghost{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
+.lw .plan{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lw .plan div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;min-width:0;font-size:15px}
+.lw .plan .caps{color:var(--gold);display:block;margin-bottom:4px}
+@media (max-width:440px){.lw .plan{grid-template-columns:1fr}}
+.lw .best{background:linear-gradient(135deg,#8f1422,var(--red));border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.lw .best .caps{color:#ffe6aa}
+.lw .best p{font-size:18px;font-weight:700;line-height:1.3}
+.lw .best small{opacity:.9;font-size:14px}
+.lw .section{display:flex;flex-direction:column;gap:12px}
+.lw .sub{font:900 22px "Inter",sans-serif}
+.lw .stops{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lw .stop{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:14px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.lw .num{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font:900 16px "Inter",sans-serif}
+.lw .stop.end .num{background:var(--gold);color:#1b1200}
+.lw .stop > div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.lw .when{color:var(--gold);font-weight:700;font-size:14px}
+.lw .what{color:rgba(255,244,225,.85);font-size:15px}
+.lw .tip{font-size:14px;color:var(--muted)}
+.lw .tip b{color:#fff}
+.lw .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:2px}
+.lw .chip{font:700 12px "Poppins",sans-serif;padding:4px 10px;border-radius:99px;background:rgba(64,196,112,.18);border:1px solid rgba(64,196,112,.45);color:#bff0cf;cursor:default}
+.lw .chip.tube{background:rgba(255,255,255,.08);border-color:var(--line);color:#fff}
+.lw .chip.paid{background:transparent;border-color:var(--red);color:#ff9aa4}
+.lw .maplink{font-size:13px;font-weight:700;color:var(--gold);text-decoration:none}
+.lw .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.lw .card .caps{color:var(--gold)!important}
+.lw .card ul,.lw .facts{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.lw .note{margin:0;padding:0;border:0;color:var(--muted);font-size:13px}
+.lw .facts{font-size:14px;color:rgba(255,244,225,.85)}
+.lw .src{font-size:13px;color:var(--muted)}
+.lw .src li{word-break:break-word}
+.lw .src a{color:var(--muted)}
+.lw .lwfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:14px}
+.lw .handle{background:var(--red);color:#fff;padding:8px 16px;border-radius:99px;font-weight:700;text-decoration:none}
+.lw a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="snow" aria-hidden="true"></div>
+<main class="wrap">
+  <div class="lights" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <a class="back" href="../">← All Mostly Ghumo links</a>
+  <div class="brand">MOSTLY GHUMO</div>
+  <div class="ghead">
+    <h1>LIGHTS WALKS<em>London at Christmas</em></h1>
+    <div class="stamp" aria-hidden="true"><div><b>LONDON</b><small>XMAS · 2026</small></div></div>
+  </div>
+  <p class="muted">Two walks I planned this year: the classic West End route with every big display, and a calmer one through Knightsbridge and Chelsea. Both free, with the nearest tube at every stop and the buses worth riding.</p>
+  <p class="muted small">Facts checked 10 Nov 2026</p>
+  <div class="lw">
+<nav class="switch" aria-label="Choose a walk">
+    <a href="#west-end"><span class="caps">Walk 1 · ~4 km · 9 stops</span><b>The West End lights walk</b><span>Selfridges to Covent Garden · 1-hour version inside</span></a>
+    <a href="#knightsbridge"><span class="caps">Walk 2 · 2.7 km · 7 stops</span><b>The other lights walk</b><span>Hyde Park to Chelsea</span></a>
+  </nav>
+
+  <section id="west-end" class="route">
+  <header class="hero">
+    <span class="eyebrow caps">Walk 1 · The classic</span>
+    <h2 class="routeh">The West End lights walk</h2>
+    <span class="path caps">Selfridges → Mayfair → Regent St → Covent Garden</span>
+    <p class="lede">The Christmas route I planned this year: the big West End lights in one evening, from Selfridges' windows through Mayfair's prettiest corners to the golden bells in Covent Garden, with the nearest tube at every stop and the buses worth riding.</p>
+    <div class="stats">
+      <div><b>~4 km</b><span class="caps">Walk</span></div>
+      <div><b>2–3 hrs</b><span class="caps">With stops</span></div>
+      <div><b>9</b><span class="caps">Stops</span></div>
+      <div><b>Free</b><span class="caps">To see</span></div>
+    </div>
+  </header>
+
+  <figure class="map" style="margin:0">
+    <img loading="lazy" src="../assets/lights-west-end-map.jpg" alt="Route map from Selfridges along Oxford Street to Hanover Square, down New Bond Street to Ralph Lauren, through Burlington Arcade to Fortnum and Mason, up Regent Street to Carnaby Street, then through Soho to Seven Dials and Covent Garden, with tube stations and bus routes 88, 453 and 139 marked" width="944" height="856">
+    <figcaption>Stylised map for orientation. Dotted blue lines are bus routes; dark dots are tube stations. About an hour of walking; allow 2–3 hours with photos.</figcaption>
+  </figure>
+
+  <div class="btnrow">
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Selfridges+London&destination=Covent+Garden+Piazza+London&waypoints=Hanover+Square+London%7CRalph+Lauren+1+New+Bond+Street+London%7CBurlington+Arcade+London%7CFortnum+%26+Mason+Piccadilly+London%7CCarnaby+Street+London%7CSeven+Dials+London&travelmode=walking" target="_blank" rel="noopener">Open walking route in Google Maps ↗</a>
+  </div>
+
+  <section class="plan" aria-label="Start and finish">
+    <div><span class="caps">Start</span>Bond Street tube (Central, Jubilee, Elizabeth), two minutes from Selfridges. Aim for 3.30–4pm</div>
+    <div><span class="caps">Finish</span>Covent Garden tube (Piccadilly). If it's packed, Leicester Square is a 5-minute walk</div>
+  </section>
+
+  <div class="best">
+    <span class="caps">When to go</span>
+    <p>Any weekday from Fri 13 Nov, starting 3.30–4pm</p>
+    <small>Bond Street and Covent Garden switch on the evening of Thu 12 Nov, so from the 13th everything on the route is lit for the whole walk. Weekdays are calmer than Fridays and Saturdays. The lights are free; food, shopping and tickets are not.</small>
+  </div>
+
+  <section class="section">
+    <h3 class="sub">Stop by stop</h3>
+    <ol class="stops">
+      <li class="stop end"><span class="num">1</span><div>
+        <h3>Selfridges + Oxford Street</h3><span class="when">Windows unveiled 22 Oct · lights on from 9 Nov</span>
+        <p class="what">Selfridges' Christmas And The City windows, then Oxford Street's lights: classic stars plus four giant Hogwarts house lights, each with floating candles.</p>
+        <p class="tip"><b>Tip:</b> Oxford Street has been car-free between Orchard Street and Great Portland Street since 26 Oct, so walk down the middle. No buses run on it.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Bond Street</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Selfridges+Oxford+Street+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">2</span><div>
+        <h3>Hanover Square</h3><span class="when">Harry Potter Christmas tree</span>
+        <p class="what">A Harry Potter-themed tree with an enchanted snowfall show, just south of Oxford Street.</p>
+        <p class="tip"><b>Tip:</b> The snow show is listed as hourly, so arrive just before the hour.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Oxford Circus</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Hanover+Square+London+W1" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">3</span><div>
+        <h3>New Bond Street + Ralph Lauren</h3><span class="when">Lights on Thu 12 Nov, 7pm</span>
+        <p class="what">Crown Jewels-inspired lights (tiaras, pearl necklaces, the Imperial State Crown), in this design's final year. At the bottom, Ralph Lauren's five-metre Giving Tree at 1 New Bond Street: donate to The Royal Marsden to dedicate a star.</p>
+        <p class="tip"><b>Tip:</b> Take Brook Street west from Hanover Square to join Bond Street.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Green Park</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Ralph+Lauren+1+New+Bond+Street+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">4</span><div>
+        <h3>Burlington Arcade</h3><span class="when">Covered Regency arcade</span>
+        <p class="what">A short cut from Burlington Gardens down to Piccadilly, and one of the prettiest walk-throughs in Mayfair.</p>
+        <p class="tip"><b>Tip:</b> It's a shopping arcade with closing times, so do this part early in the evening. If it's shut, walk down Old Bond Street instead.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Green Park</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Burlington+Arcade+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">5</span><div>
+        <h3>Fortnum &amp; Mason</h3><span class="when">Christmas windows on Piccadilly</span>
+        <p class="what">Fortnum's flagship on Piccadilly, dressed for Christmas.</p>
+        <p class="tip"><b>Tip:</b> Then walk east along Piccadilly to Piccadilly Circus.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Piccadilly Circus</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Fortnum+%26+Mason+181+Piccadilly+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">6</span><div>
+        <h3>Regent Street</h3><span class="when">Angels lit from Thu 5 Nov</span>
+        <p class="what">The Spirits of Christmas angels, back for their 10th year.</p>
+        <p class="tip"><b>Tip:</b> Walk up from Piccadilly Circus for the classic view of the angels curving away. Hamleys' windows are on the way.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Piccadilly Circus</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Regent+Street+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">7</span><div>
+        <h3>Carnaby Street</h3><span class="when">Lights on from Wed 4 Nov</span>
+        <p class="what">This year's theme is Press Play on Christmas, inspired by 90s nostalgia.</p>
+        <p class="tip"><b>Tip:</b> Liberty is one minute north on Great Marlborough Street. Its Christmas windows are worth the detour.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Oxford Circus</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Carnaby+Street+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop"><span class="num">8</span><div>
+        <h3>Seven Dials</h3><span class="when">Lit from Thu 12 Nov</span>
+        <p class="what">Part of the Covent Garden display, which covers the Piazza, Seven Dials and Neal's Yard.</p>
+        <p class="tip"><b>Tip:</b> Walk through Soho to get here (about 12 minutes), then peek into Neal's Yard round the corner.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Covent Garden</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Seven+Dials+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+      <li class="stop end"><span class="num">9</span><div>
+        <h3>Covent Garden</h3><span class="when">Lights on Thu 12 Nov · market to 2 Jan</span>
+        <p class="what">A 50ft Norwegian spruce, 40 giant golden bells, mirror balls and baubles, plus a new Forest of Theatre: trees inspired by West End shows.</p>
+        <p class="tip"><b>Tip:</b> From 4 to 31 Dec, snow falls on the Piazza every hour from midday to 9pm. Time your finish for it.</p>
+        <div class="meta"><span class="chip">Free</span><span class="chip tube">Tube: Covent Garden</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Covent+Garden+Piazza+London" target="_blank" rel="noopener">Map ↗</a></div></div></li>
+    </ol>
+  </section>
+
+  <section class="section" id="short">
+    <h3 class="sub">Short on time? The 1-hour version</h3>
+    <figure class="map" style="margin:0">
+      <img loading="lazy" src="../assets/lights-1-hour-map.jpg" alt="Short route in gold from Oxford Circus down Regent Street, through Carnaby Street and Soho to Seven Dials and Covent Garden, with the full walk shown faintly in pink" width="944" height="640">
+      <figcaption>Gold is the 1-hour route; pale pink is the full walk. Dark dots are tube stations.</figcaption>
+    </figure>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">About 2 km · ~30 min walking · about 1 hour with stops</span>
+      <ul>
+        <li><b>Start:</b> Oxford Circus tube (Bakerloo, Central, Victoria).</li>
+        <li><b>1 · Regent Street:</b> walk south under the angels as far as Beak Street.</li>
+        <li><b>2 · Carnaby Street:</b> turn left onto Beak Street, then up Carnaby for Press Play on Christmas.</li>
+        <li><b>3 · Seven Dials:</b> cut east through Soho on Broadwick Street (about 12 minutes).</li>
+        <li><b>4 · Covent Garden:</b> finish at the tree and golden bells. Covent Garden tube is two minutes away.</li>
+      </ul>
+      <p class="note">It keeps the four biggest displays and skips the Mayfair detours. Seven Dials and Covent Garden light up from 12 Nov; Regent Street and Carnaby are already lit.</p>
+      <div class="btnrow"><a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&origin=Oxford+Circus+station+London&destination=Covent+Garden+Piazza+London&waypoints=Beak+Street+London%7CCarnaby+Street+London%7CSeven+Dials+London&travelmode=walking" target="_blank" rel="noopener">Open the 1-hour route in Google Maps ↗</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 class="sub">Getting around</h3>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">By bus · top deck</span>
+      <ul>
+        <li><b>88 or 453</b> run the full length of Regent Street: the easiest way to see the angels from above.</li>
+        <li><b>139</b> runs from Piccadilly Circus via Haymarket, Trafalgar Square and the Strand. Get off at Southampton Street for Covent Garden.</li>
+        <li><b>No buses on Oxford Street</b> since it went car-free. Routes 98, 139 and 390 now go via Wigmore Street, and the 7 and 94 stop at Marble Arch.</li>
+      </ul>
+      <p class="note">Bus routes can change. Check TfL Go before you travel.</p>
+    </div>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">Tube stations on the way</span>
+      <ul>
+        <li>Bond Street · Oxford Circus · Green Park · Piccadilly Circus · Tottenham Court Road · Leicester Square · Covent Garden</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">Want more lights?</span>
+      <ul><li>From Covent Garden, Leicester Square's star lights and St Martin's Lane's theatre-inspired trees are 5–10 minutes away.</li></ul>
+    </div>
+  </section>
+  </section>
+
+
+  <section id="knightsbridge" class="route">
+  <header class="hero">
+    <span class="eyebrow caps">Walk 2 · The calmer one</span>
+    <h2 class="routeh">The other lights walk</h2>
+    <span class="path caps">Hyde Park → Knightsbridge → Chelsea</span>
+    <p class="lede">Everyone squeezes down Oxford Street. This route takes you past Knightsbridge, Sloane Street and King's Road instead, ending at a winter village in the Royal Hospital grounds. Calmer streets, the same Christmas sparkle.</p>
+    <div class="stats">
+      <div><b>2.7 km</b><span class="caps">Walk</span></div>
+      <div><b>~35 min</b><span class="caps">On foot</span></div>
+      <div><b>7</b><span class="caps">Stops</span></div>
+      <div><b>Free*</b><span class="caps">To walk</span></div>
+    </div>
+  </header>
+
+  <figure class="map" style="margin:0">
+    <img loading="lazy" src="../assets/lights-knightsbridge-map.jpg" alt="Route map from Hyde Park Corner through Knightsbridge, Harrods, Sloane Street, Sloane Square and Duke of York Square to Chelsea Winter Village" width="968" height="929">
+    <figcaption>Stylised map for orientation. Use the walking directions link for turn-by-turn.</figcaption>
+  </figure>
+
+  <div class="btnrow">
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Hyde+Park+Corner+station+London&destination=Royal+Hospital+Chelsea+London+Gate+Royal+Hospital+Road&waypoints=Harrods+London%7CSloane+Square+London%7CDuke+of+York+Square+London&travelmode=walking" target="_blank" rel="noopener">Open walking route in Google Maps ↗</a>
+  </div>
+
+  <section class="plan" aria-label="Start and finish">
+    <div><span class="caps">Start</span>Hyde Park Corner Tube (Piccadilly line)</div>
+    <div><span class="caps">Finish</span>Sloane Square Tube (District &amp; Circle), about 10 min from the Winter Village</div>
+  </section>
+
+  <div class="best">
+    <span class="caps">Best night to go</span>
+    <p>Thu 26 – Sat 28 Nov, after 4pm</p>
+    <small>Every stop is lit, the Winter Village is open, Sloane Street's tree trail is still up, and the Mayfair Christmas Market is on near the start. Any weekday up to Tue 1 Dec works too. It's dark by about 4pm.</small>
+  </div>
+
+  <section class="section">
+    <h3 class="sub">Stop by stop</h3>
+    <ol class="stops">
+      <li class="stop end">
+        <span class="num">1</span>
+        <div>
+          <h3>Hyde Park Corner</h3>
+          <span class="when">Winter Wonderland: 19 Nov – 3 Jan</span>
+          <p class="what">The walk starts beside Hyde Park's Winter Wonderland, with its Luminarie Lane light market and a canopy of lights over the ice rink.</p>
+          <p class="tip"><b>Tip:</b> Entry needs a pre-booked arrival slot, even for off-peak. Blue Gate is about 5 min from the Tube. If you're only here for the walk, take in the glow from outside and keep going.</p>
+          <div class="meta"><span class="chip paid">Entry ticketed from £1</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Hyde+Park+Corner+London" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="num">2</span>
+        <div>
+          <h3>Knightsbridge</h3>
+          <span class="when">Lights on from Tue 10 Nov</span>
+          <p class="what">An eco design along Brompton Road made with recycled plastic bottles, with hidden horse details.</p>
+          <p class="tip"><b>Tip:</b> The horses nod to the Household Cavalry barracks just across the road in Hyde Park.</p>
+          <div class="meta"><span class="chip">Free</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Brompton+Road+Knightsbridge+London" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="num">3</span>
+        <div>
+          <h3>Harrods &amp; Hans Crescent</h3>
+          <span class="when">Hans Crescent lights from 10 Nov</span>
+          <p class="what">The Knightsbridge lights continue round the side of Harrods on Hans Crescent.</p>
+          <p class="tip"><b>Tip:</b> Look at the front windows, then cut round Hans Crescent towards Sloane Street. It's far quieter than Brompton Road.</p>
+          <div class="meta"><span class="chip">Free</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Hans+Crescent+London+SW1X" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="num">4</span>
+        <div>
+          <h3>Sloane Street</h3>
+          <span class="when">Firefly Festive Forest: 12 Nov – 1 Dec</span>
+          <p class="what">A trail of Christmas trees lines the street. Sloane Street's Christmas Celebration runs Sat 14 Nov, 1–7pm, and Harvey Nichols unveils its festive display on 20 Nov.</p>
+          <p class="tip"><b>Tip:</b> The tree trail ends on 1 Dec, so go before then if you want it in your photos.</p>
+          <div class="meta"><span class="chip">Free</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Sloane+Street+London+SW1X" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="num">5</span>
+        <div>
+          <h3>Sloane Square</h3>
+          <span class="when">Chelsea lights from Thu 12 Nov</span>
+          <p class="what">Chelsea's lights cover Sloane Square, Sloane Street and King's Road.</p>
+          <p class="tip"><b>Tip:</b> You're halfway. Sloane Square Tube is right here if the weather turns.</p>
+          <div class="meta"><span class="chip">Free</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Sloane+Square+London" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="num">6</span>
+        <div>
+          <h3>Duke of York Square &amp; King's Road</h3>
+          <span class="when">Ever After Garden: 5 Nov – 21 Dec, daily 3–9pm</span>
+          <p class="what">A field of illuminated white roses fills the square, raising money for The Royal Marsden Cancer Charity. The square's tree lighting is Thu 12 Nov, 5–7.30pm, and King's Road has sparkling crowns overhead.</p>
+          <p class="tip"><b>Tip:</b> Free to wander. You can dedicate a rose to someone for a suggested £15 donation.</p>
+          <div class="meta"><span class="chip">Free</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Duke+of+York+Square+London+SW3" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+      <li class="stop end">
+        <span class="num">7</span>
+        <div>
+          <h3>Chelsea Winter Village</h3>
+          <span class="when">25 Nov – 28 Dec · gates 4.30pm</span>
+          <p class="what">The finale, in the grounds of the Royal Hospital Chelsea. Go in at London Gate on Royal Hospital Road. The village food court is free; the Chelsea Winter Illuminations trail through Ranelagh Gardens is ticketed.</p>
+          <p class="tip"><b>Tip:</b> Trail tickets run from £19 (super off-peak, usually later slots from about 8pm) up to £30.95 at peak. The trail closes at 10pm and the village at 11pm.</p>
+          <div class="meta"><span class="chip">Village free</span><span class="chip paid">Light trail ticketed</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Royal+Hospital+Chelsea+London+Gate+Royal+Hospital+Road" target="_blank" rel="noopener">Map ↗</a></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h3 class="sub">Make more of it</h3>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">Before you start · 26–28 Nov only</span>
+      <h3>Mayfair Christmas Market</h3>
+      <p>At Mayfair Place, 11am–9pm, about 3–5 min from Green Park Tube. From there it's a walk along Piccadilly to Hyde Park Corner to start the route.</p>
+      <p class="note">Listed as free entry in published guides; the organiser's page doesn't state it, so check before you go.</p>
+    </div>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">Keep going · across the river</span>
+      <h3>Battersea Power Station</h3>
+      <p>Walk down to Chelsea Bridge and cross to the power station for the Glide ice rink (6 Nov – 3 Jan) and its Christmas decorations, including a 40ft tree. Allow roughly 15–20 min on foot. Battersea Power Station Tube (Northern line) gets you home.</p>
+      <p class="note">This is Battersea Power Station, not Battersea Park. The park hosts the fireworks.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 class="sub">Getting around</h3>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">By bus</span>
+      <ul>
+        <li><b>9, 52 or 452</b> stop at Knightsbridge station; <b>14, 74 or C1</b> run along Brompton Road past Harrods.</li>
+        <li><b>19, 22, 137 or 452</b> run down Sloane Street towards Sloane Square.</li>
+        <li><b>C1</b> stops at Sloane Square.</li>
+      </ul>
+      <p class="note">Bus routes can change. Check TfL Go before you travel.</p>
+    </div>
+    <div class="card">
+      <span class="caps" style="color:var(--muted)">Tube stations on the way</span>
+      <ul><li>Hyde Park Corner · Knightsbridge (both Piccadilly) · Sloane Square (District, Circle)</li></ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 class="sub">Backup route</h3>
+    <div class="card">
+      <h3>Markets by the river · Waterloo → London Bridge</h3>
+      <ul>
+        <li>Southbank Centre Winter Market: 2 Nov – 4 Jan, 11am–10pm, closed 25 and 31 Dec. 3–5 min from Waterloo.</li>
+        <li>Follow the river east past Tate Modern (about 20–25 min), on to Borough Market (about 9 min).</li>
+        <li>Finish at Winter by the River, London Bridge City: 10 Nov – 3 Jan. About 8–10 min.</li>
+      </ul>
+      <p class="note">About 45–55 min of walking, plus market time. Ends at London Bridge Tube and rail.</p>
+    </div>
+  </section>
+  </section>
+
+  <section class="section">
+    <h2>Good to know</h2>
+    <ul class="facts">
+      <li>Light displays are free to see. Winter Wonderland entry and the Chelsea Winter Illuminations trail are ticketed.</li>
+      <li>Some venues close on Christmas Day. Check the organiser before you travel.</li>
+      <li>Times, prices and bus routes can change. Every fact here was checked against the sources below on 10 Nov 2026.</li>
+      <li>Where sources disagreed, we went with the official one: the Winter Village opens 25 Nov per Kensington &amp; Chelsea Council (one listing says 26 Nov).</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Sources</h2>
+    <ul class="facts src">
+      <li><a href="https://www.timeout.com/london/news/every-major-christmas-light-displays-switch-on-dates-2026-102626" target="_blank" rel="noopener">Time Out: London Christmas light switch-on dates 2026</a></li>
+      <li><a href="https://www.rbkc.gov.uk/newsroom/christmas-events-kensington-and-chelsea-2026" target="_blank" rel="noopener">Kensington &amp; Chelsea Council: Christmas events 2026</a></li>
+      <li><a href="https://hydeparkwinterwonderland.com/tickets-guide/" target="_blank" rel="noopener">Hyde Park Winter Wonderland: tickets guide</a></li>
+      <li><a href="https://www.ianvisits.co.uk/articles/tickets-alert-a-winter-light-trail-returns-to-chelsea-2-93665/" target="_blank" rel="noopener">IanVisits: Chelsea Winter Illuminations tickets</a></li>
+      <li><a href="https://secretldn.com/es/ever-after-garden-chelsea-londres-2026/" target="_blank" rel="noopener">Secret London: Ever After Garden 2026</a></li>
+      <li><a href="https://secretldn.com/knightsbridge-christmas-lights-display-outside-harrods/" target="_blank" rel="noopener">Secret London: Knightsbridge lights outside Harrods</a></li>
+      <li><a href="https://www.novikovrestaurant.co.uk/mayfairchristmasmarket" target="_blank" rel="noopener">Mayfair Christmas Market (organiser)</a></li>
+      <li><a href="https://www.ents24.com/london-events/battersea-power-station/glide-2026/7530193" target="_blank" rel="noopener">Glide 2026 at Battersea Power Station</a></li>
+      <li><a href="https://southbank.london/whats-on/winter-market" target="_blank" rel="noopener">South Bank: Winter Market</a></li>
+      <li><a href="https://www.timeout.com/london/news/christmas-market-opening-dates-2026-110626" target="_blank" rel="noopener">Time Out: Christmas market opening dates 2026</a></li>
+      <li><a href="https://www.timeout.com/london/news/oxford-street-christmas-lights-2026-switch-on-date-harry-potter-110326" target="_blank" rel="noopener">Time Out: Oxford Street lights 2026</a></li>
+      <li><a href="https://www.timeout.com/london/news/regent-street-christmas-lights-switch-on-2026-110426" target="_blank" rel="noopener">Time Out: Regent Street lights 2026</a></li>
+      <li><a href="https://www.timeout.com/london/news/bond-street-christmas-lights-switch-on-date-2026-110626" target="_blank" rel="noopener">Time Out: Bond Street lights 2026</a></li>
+      <li><a href="https://www.timeout.com/london/news/covent-garden-christmas-lights-switch-on-exact-date-2026-110226" target="_blank" rel="noopener">Time Out: Covent Garden lights 2026</a></li>
+      <li><a href="https://www.bondstreet.co.uk/events/whats-on-the-ralph-lauren-giving-tree-2" target="_blank" rel="noopener">Bond Street: the Ralph Lauren Giving Tree</a></li>
+      <li><a href="https://www.itv.com/news/london/2026-10-22/selfridges-unveils-christmas-windows-with-festive-scenes-from-around-the-world" target="_blank" rel="noopener">ITV: Selfridges Christmas windows 2026</a></li>
+      <li><a href="https://www.euronews.com/2026/10/27/londons-most-famous-shopping-street-is-now-pedestrianised" target="_blank" rel="noopener">Euronews: Oxford Street pedestrianised</a></li>
+      <li><a href="https://britbrief.co.uk/business/transport/oxford-street-bus-diversions-full-list-of-route-changes.html" target="_blank" rel="noopener">Brit Brief: Oxford Street bus diversions</a></li>
+      <li><a href="https://londonist.com/london/christmas-in-london/how-to-see-london-s-christmas-lights-by-bus" target="_blank" rel="noopener">Londonist: seeing the lights by bus</a></li>
+      <li><a href="https://bustimes.org/localities/st-james-london" target="_blank" rel="noopener">bustimes: Regent Street stops</a></li>
+      <li><a href="https://www.yahoo.com/entertainment/movies/articles/harry-potter-oxford-street-christmas-112019387.html" target="_blank" rel="noopener">Harry Potter x Oxford Street: Hogwarts lights and Hanover Square tree</a></li>
+      <li><a href="https://www.nye.london/en/london-christmas-lights.html" target="_blank" rel="noopener">NYE London: 2026 lights guide (Hanover Square and Covent Garden snow)</a></li>
+      <li><a href="https://tfl.gov.uk/bus/stop/490000130K2/sloane-street-knightsbridge-station" target="_blank" rel="noopener">TfL: Sloane Street / Knightsbridge Station stop</a></li>
+    </ul>
+  </section>
+
+
+  
+<div class="lwfoot">
+    <span>Saved this? Send it to whoever you're dragging along.</span>
+    <a class="handle" href="https://www.instagram.com/mostlyghumo/" target="_blank" rel="noopener">@mostlyghumo</a>
+  </div>
+  </div>
+  <a class="cta" href="../">More Mostly Ghumo guides →</a>
+  <footer>© 2026 Mostly Ghumo</footer>
+</main>
+<script src="../assets/snow.js"></script>
+</body>
+</html>

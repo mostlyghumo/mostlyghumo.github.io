@@ -1,1 +1,53 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MostlyGhumo | Travel Guides</title><style>body{margin:0;background:#f8f5ec;color:#123b23;font-family:system-ui,Arial,sans-serif}main{max-width:900px;margin:8vh auto;padding:28px}h1{font-family:Georgia,serif;font-size:clamp(40px,7vw,72px);margin:0 0 12px}p{line-height:1.6;font-size:18px}.card{display:block;padding:32px;border-radius:18px;background:white;text-decoration:none;color:#123b23;border:1px solid #d4dfd5;margin-top:28px}.card h2{font-size:30px;margin:0 0 12px}.button{display:inline-block;margin-top:12px;background:#123b23;color:white;padding:12px 20px;border-radius:30px;font-weight:700}small{letter-spacing:.15em;text-transform:uppercase}</style></head><body><main><small>MostlyGhumo · Travel Diaries</small><h1>Real trips. Useful guides.</h1><p>Explore travel routes, practical tips and memorable places from our journeys.</p><a class="card" href="scotland-trip-2026/share-trip.html"><small>5-day road trip</small><h2>Scotland — Highlands & Isle of Skye</h2><p>Explore the full itinerary, scenic stops, interactive maps and day-by-day route.</p><span class="button">Explore Scotland guide →</span></a></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MostlyGhumo | Travel Guides</title>
+<meta name="description" content="Mostly Ghumo — London & UK travel guides, monthly event dates and real-life recommendations.">
+<meta property="og:title" content="Mostly Ghumo">
+<meta property="og:description" content="London & UK guides, monthly event dates and more.">
+<meta property="og:image" content="assets/og-london-november.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,900;1,900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="snow" aria-hidden="true"></div>
+<main class="wrap">
+  <div class="lights" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="brand">MOSTLYGHUMO · TRAVEL DIARIES</div>
+  <header class="hero">
+    <div class="avatar"><div>MG</div></div>
+    <h1>Real trips.<br>Useful guides.</h1>
+    <p class="muted">Travel routes, practical tips and memorable places from our journeys ✨</p>
+  </header>
+  <nav class="links" id="links" aria-label="Links"></nav>
+  <footer>© <span id="y"></span> MostlyGhumo</footer>
+</main>
+<script>
+/* ===== EDIT YOUR LINKS HERE =====
+   Newest at the top. Leave url "" to hide a link until it's ready.
+   img is optional (a small cover thumbnail), otherwise emoji is used. */
+const LINKS = [
+  { title: "London in November 🎄", sub: "Free events, Christmas lights & markets — every date", url: "london-november/", img: "assets/london-november-cover.jpg", tag: "NEW" },
+  { title: "5-day road trip Scotland", sub: "Highlands & Isle of Skye · itinerary, maps & day-by-day route", url: "scotland-trip-2026/share-trip.html", emoji: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
+  { title: "Instagram", sub: "Follow for monthly London plans", url: "", emoji: "📸" },
+];
+
+const box = document.getElementById("links");
+LINKS.filter(l => l.url).forEach(l => {
+  const a = document.createElement("a");
+  a.className = "link"; a.href = l.url;
+  if (/^https?:/.test(l.url)) { a.target = "_blank"; a.rel = "noopener"; }
+  a.innerHTML = (l.img ? `<img src="${l.img}" alt="" loading="lazy">` : `<span class="ico">${l.emoji || "✨"}</span>`)
+    + `<span><b></b><small></small></span>` + (l.tag ? `<span class="tag">${l.tag}</span>` : "");
+  a.querySelector("b").textContent = l.title;
+  a.querySelector("small").textContent = l.sub || "";
+  box.appendChild(a);
+});
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+<script src="assets/snow.js"></script>
+</body>
+</html>

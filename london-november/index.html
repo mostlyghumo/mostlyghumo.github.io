@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>London in November 2026 · Mostly Ghumo</title>
+<meta name="description" content="Things to do in London this November: free events, Christmas lights switch-on dates, markets, ice rinks and big nights out — every date in one list.">
+<meta property="og:title" content="London in November 2026 — every date">
+<meta property="og:description" content="Free events, Christmas lights, markets & winter openings.">
+<meta property="og:image" content="../assets/og-london-november.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,900;1,900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="snow" aria-hidden="true"></div>
+<main class="wrap">
+  <div class="lights" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <a class="back" href="../">← All Mostly Ghumo links</a>
+  <div class="brand">MOSTLY GHUMO</div>
+  <div class="ghead">
+    <h1>NOVEMBER<em>in London</em></h1>
+    <div class="stamp" aria-hidden="true"><div><b>LONDON</b><small>NOV · 2026</small></div></div>
+  </div>
+  <p class="muted">Free things, big nights out, Christmas lights &amp; winter openings. Past dates disappear automatically.</p>
+
+  <div class="chips" role="group" aria-label="Filter">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="free" aria-pressed="false">🎁 Free</button>
+    <button class="chip" data-f="major" aria-pressed="false">🎟️ Book early</button>
+    <button class="chip" data-f="lights-s" aria-pressed="false">💡 Lights</button>
+    <button class="chip" data-f="markets" aria-pressed="false">⛸️ Markets &amp; rinks</button>
+  </div>
+
+  <div id="sections"></div>
+
+  <div class="note">Dates checked 10 Nov 2026 against organisers, Visit London, Time Out and London Drum. Ticket status and times can change, so always confirm with the organiser before you travel.</div>
+  <a class="cta" href="../">More Mostly Ghumo guides →</a>
+  <footer>© 2026 Mostly Ghumo</footer>
+</main>
+<script>
+/* ===== EVENT DATA =====
+   start / end are YYYY-MM-DD. end is optional (defaults to start).
+   Rows hide automatically once their end date has passed. */
+const SECTIONS = [
+  { id: "free", title: "Free things to do", sub: "no ticket needed", rows: [
+    { start: "2026-11-10", name: "Annakut at Neasden Temple", note: "Grand Haveli Annakut · 10am–9pm · NW10" },
+    { start: "2026-11-11", name: "Marylebone Village lights", note: "event 3–8pm · switch-on 6pm" },
+    { start: "2026-11-12", name: "Bond Street & Covent Garden lights", note: "switch-on evening" },
+    { start: "2026-11-14", name: "Lord Mayor's Show", note: "City of London · 11am–2:30pm · 2.86-mile parade" },
+    { start: "2026-11-14", name: "Royal gun salutes", note: "King's birthday · Green Park & Tower of London" },
+    { start: "2026-11-18", name: "Greenwich lantern parade & lights", note: "Greenwich Market · from 5pm" },
+    { start: "2026-11-26", end: "2026-11-28", name: "Mayfair Christmas Market", note: "free entry · 11am–9pm" },
+    { start: "2026-11-02", end: "2027-01-03", name: "Southbank Centre Winter Market", note: "riverside stalls · to 3 Jan" },
+    { start: "2026-11-05", end: "2026-12-21", name: "Ever After Garden", note: "Chelsea · donations to charity · to 21 Dec" },
+  ]},
+  { id: "major", title: "Book these early", sub: "ticketed · worth it", rows: [
+    { start: "2026-11-13", end: "2026-11-22", name: "EFG London Jazz Festival", note: "venues across London · 10 days" },
+    { start: "2026-11-14", end: "2027-01-17", name: "Hogwarts in the Snow", note: "Warner Bros. Studio Tour, Watford" },
+    { start: "2026-11-21", end: "2027-04-11", name: "Van Eyck: The Portraits", note: "The National Gallery" },
+    { start: "2026-11-21", end: "2027-01-03", name: "The Snowman on stage", note: "Peacock Theatre · from £18" },
+    { start: "2026-11-22", name: "Carmina Burana", note: "Royal Albert Hall · from £24" },
+    { start: "2026-11-28", end: "2027-01-03", name: "Pinocchio at the Globe", note: "Shakespeare's Globe" },
+  ]},
+  { id: "lights-s", title: "Lights switch-on", sub: "the dates to know", rows: [
+    { start: "2026-11-01", end: "2027-01-06", name: "Oxford St · Regent St · Carnaby", note: "+ Leicester Square & St Martin's Lane", label: "LIT NOW" },
+    { start: "2026-11-10", name: "Knightsbridge" },
+    { start: "2026-11-11", name: "Marylebone · Old Spitalfields Market" },
+    { start: "2026-11-12", name: "Covent Garden · Bond Street", note: "+ King's Road, Fitzrovia, Fulham Pier" },
+    { start: "2026-11-18", name: "Fleet Street · Greenwich Market" },
+    { start: "2026-11-19", name: "Leadenhall Market · St Katharine Docks" },
+  ]},
+  { id: "markets", title: "Markets & rinks", sub: "+ winter openings", rows: [
+    { start: "2026-11-06", end: "2027-01-03", name: "Trafalgar Square Christmas market", note: "tree lighting is in December" },
+    { start: "2026-11-06", end: "2027-01-03", name: "Glide ice rink", note: "Battersea Power Station" },
+    { start: "2026-11-10", name: "Winter by the River opens", note: "London Bridge City" },
+    { start: "2026-11-11", end: "2027-01-10", name: "Skate at Somerset House" },
+    { start: "2026-11-13", end: "2027-01-03", name: "Christmas at Kew", note: "selected dates · advance tickets" },
+    { start: "2026-11-19", end: "2027-01-03", name: "Hyde Park Winter Wonderland", note: "ticketed" },
+    { start: "2026-11-20", end: "2027-01-03", name: "Hampton Court Palace ice rink" },
+    { start: "2026-11-25", end: "2026-12-28", name: "Chelsea Winter Village" },
+    { start: "2026-11-28", end: "2027-01-03", name: "Hampton Court Christmas season" },
+  ]},
+];
+
+const MON = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const d = s => { const [y, m, dd] = s.split("-").map(Number); return new Date(y, m - 1, dd); };
+const today = new Date(); today.setHours(0, 0, 0, 0);
+function pill(r) {
+  const s = d(r.start), e = d(r.end || r.start);
+  if (s < today) return r.label || "NOW ON";
+  if (e.getTime() !== s.getTime() && e.getMonth() === s.getMonth()) return `${s.getDate()}–${e.getDate()} ${MON[s.getMonth()]}`;
+  if (e.getTime() !== s.getTime()) return `FROM ${s.getDate()} ${MON[s.getMonth()]}`;
+  return `${s.getDate()} ${MON[s.getMonth()]}`;
+}
+const host = document.getElementById("sections");
+SECTIONS.forEach(sec => {
+  const live = sec.rows.filter(r => d(r.end || r.start) >= today)
+    .sort((a, b) => Math.max(d(a.start), today) - Math.max(d(b.start), today));
+  const el = document.createElement("section");
+  el.className = sec.id; el.dataset.id = sec.id;
+  el.innerHTML = `<h2></h2><div class="rows"></div>`;
+  el.querySelector("h2").innerHTML = `${sec.title} <span>${sec.sub}</span>`;
+  const rows = el.querySelector(".rows");
+  if (!live.length) rows.innerHTML = `<p class="empty">All done for this month — see the next guide.</p>`;
+  live.forEach(r => {
+    const row = document.createElement("div");
+    row.className = "row";
+    const body = document.createElement(r.url ? "a" : "div");
+    if (r.url) { body.href = r.url; body.target = "_blank"; body.rel = "noopener"; }
+    body.innerHTML = "<b></b>" + (r.note ? "<small></small>" : "");
+    body.querySelector("b").textContent = r.name;
+    if (r.note) body.querySelector("small").textContent = r.note;
+    row.innerHTML = `<div class="pill"></div>`;
+    row.querySelector(".pill").textContent = pill(r);
+    row.appendChild(body);
+    rows.appendChild(row);
+  });
+  host.appendChild(el);
+});
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+  const f = c.dataset.f;
+  document.querySelectorAll("#sections section").forEach(s => s.hidden = f !== "all" && s.dataset.id !== f);
+}));
+</script>
+<script src="../assets/snow.js"></script>
+</body>
+</html>
